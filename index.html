@@ -1,0 +1,181 @@
+<!--
+Flaticon is best to pic images for skills and other action oreented skills
+Giphy is another websit for good gif for our website
+CSS button generator, search this to add button to our website
+Favicon= how to creat one, we need to go to favicon.cc on google
+<div>= is a special HTML element that allows us to drive our content up on owr website, so that we can structure each div separately,it does nothing by itself,it does nothing unless we use CSS with it, essentially a div stands for a content division element,it basically allows us to split our content into separate containers so that we can affect the layout of each separately
+</div>
+NOTE: see if we give width:600px; then this is the static pixels, this don't changes
+    but if we give width: 100; then that refers to the percentage of the viewport, you know that
+
+Playing with the (width*height),border,padding,margin,
+1.
+width: 200px;
+height: 200px
+2.
+border:solid;
+3.
+border-width: 50px;  //it increases the width of the border in all direction by 50px
+border-width:0px 10px 20px 30px; //this is to give width of 0,10,20,30 pixel in top,right,bottom and left
+4.
+padding:20px; //this is to give padding of 200px
+5.
+margin:10px; //this is buffer zone arround our image, where there is free space around the out image by 10px in all direction
+
+Display
+There sre three Display property
+1.block
+2.inline
+3.inline-block
+4.none
+
+1.block are those elements which take up hole width of the project by default, like your text will take up
+      complete width of that page, even though you don't write for complete width they also block other
+      elements from sitting next to it,both at its right and left
+      eg:headers,list and list items,paragraph,form,division
+      pitfall:it never allows any element to occupie its whole width of the line of the page
+      syntax: display:block;
+              <p>abcde</p>
+2.inline are those which only the required amount of space and never covers complete width
+      good eg is span, see what ever you write in the <p> </p> will take entire width of page of that linten
+      but what wvwr we write between <span> </span> will take only the required about og space
+      eg:anchor(these are the link that we upload as text)
+        images are also inline
+       pitfall:it can't be resized like paragraph
+       syntax: display:inline;
+               <span>abcde</span>
+3.inline-block are used to over come above two pitfalls,they accupy only required amount of space and is resizable
+      eg:images
+4.none it simply removes that element from the wwebsitee,as if it did't exist
+       syntax: display:none;
+Three are mainly 3 default things happens in positioning
+1.Content is everything=if we use the large front then it take more space
+2.Order comes from code=the code is exeguted in the order we write the code
+3.Children sit on the parents=there are actually 3 dimention in our webside
+                  for eg: <div>
+                          <h1>a <span>pro</span>programmer</h1>
+                          </div>
+                  see in the above eg consider from computer to viewer direction,
+                  the div sits 1st, on top of that a and grammer sits and on top of that pro sits
+
+Position property
+1.static
+2.relative
+3.absolute
+4.fixed
+
+1.static position:static is simply go along the code, without changing any position, simply go as per the code
+2.relative position:
+    eg:
+    img
+    {
+    position:relative;  //to give extre 30px space between left edge of the screen and the image,i.s simply move image 30px to the rigtht from left
+    left:30px;
+    }
+
+coordinates:
+there are 4 coordinates 1.top
+                        2.bottom
+                        3.left
+                        4.rigtht
+img
+{
+position:relative;  //this is must code to use below property
+top:20px;  //moved down ny 20px
+left:20px; //moved rigtht
+right:200px;
+bottom:20px;
+}
+remember,moving a image(foe eg) does't change the position of other elements
+if we move down,then
+
+think like This
+if the image was at top left corner and if we give right:200px then it moves towards left and we can't see it, even though it is there
+
+3.absolute positioning
+see here if we give left:20px; then there will be 20px space from the left edge to that picture
+if we give right:20px; then there will be 20px space from the right edge to that picture
+another difference is if there are 3 colors one below the other of size 200*200 each, then imagin, if we move first image
+right by 400px then the 2nd color comes to the 1st position, then 3rd image comes to 2nd position this happens because
+when we push 1st image by 400px, then it is assumed that the 1st position of the 1st color is forgotten, as if it was not there
+therefore other two will shift up
+</picture>
+
+Font styling:we have serif,sans-serif,inherit,fantasy,cursive
+Serif:we have littel feets in all of the alpabets edges
+sans-serif:we lack the littel feets in all of the alpabets edges
+monospace=each of the characters in the word take up same amount of width eg:in coding we use this, more readable
+fantasy:low readable,like avatar movie poster style
+cuursive:hand written like handwritting and low readable
+NOTE:we can specify the a font or many font based on your preference of showing the people(cause some computer can't show some font,it is based on there downloads)
+    another thing to remember is that we can also force all the user to see same font by linking the link by font embeding by searching fonts.google.com
+NOTE:serif is default for website
+syntax:
+font-family:font_classes; eg: font-family:sans-serif;
+NOTE:one of the san-serif class is areal,vardana,etc
+font-family:verdana,sans-serif;  //first it gives preference to verdana, if not possible it goes to sans-serif
+we are using sacramento,like handwritting
+
+font-size is inherited, see giving font-size twice will simply adds up the font-size, only if we use static or rem we can prevent this
+ -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rithin</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <div class="top-container">
+    <img class="top-cloud" src="images/cloud.png" alt="image of cloud">
+    <h1>I'm Rithin.</h1>
+    <h2>a <span class="pro">pro</span>grammer</h2>
+    <img class="bottom-cloud" src="images/cloud.png" alt="image of cloud">
+    <img src="images/mountain.png" alt="image of mountain">
+  </div>
+
+  <div class="middle-container">
+    <div class="profile">
+      <img class="mypic circular" src="images/mypic.jpg" alt="my-image">
+      <h2>Hello.</h2>
+      <p class="intro">I am Student at SIT.</p>
+    </div>
+    <hr>
+    <div class="skills">
+      <h2>My Skills.</h2>
+      <div class="skill-row">
+        <img class="computerimage" src="https://cdn-icons.flaticon.com/png/512/186/premium/186225.png?token=exp=1653203499~hmac=6be01b7723ebfb8018f9ba3234c97b8f" alt="">
+        <h3>coding</h3>
+        <p>First I started coding by using C language, then as interest grown, I learned C++ and Python, along with I completed Data structure in C and C++,I have a quiet good knowledge on Machine Learning also.</p>
+      </div>
+
+      <div class="skill-row">
+        <img class="electronicimage" src="https://cdn-icons-png.flaticon.com/512/2432/2432746.png" alt="">
+        <h3>Electronic and communication</h3>
+        <p>As a student of electronics communication I have a very good knowledge of Analog and Digital Circuits and Design along with Networks, Signals and Communication. </p>
+      </div>
+    </div>
+    <hr>
+    <div class="contact-me">
+      <h2>Get In Touch</h2>
+      <h3>Please don't hesitate to contact</h3>
+      <p class="contact-message">You can contact me on Instagram, twitter, linkedin.We can discuss about problems related to programming</p>
+      <a class="btn" href="mailto:rithurithin1606@gmail.com">CONTACT ME</a>
+    </div>
+  </div>
+
+
+  <div class="bottom-container">
+    <a class="footer-link" href="https://www.linkedin.com/in/rithin-shetty/">LinkedIn</a>
+    <a class="footer-link" href="https://twitter.com/RithinHn">Twitter</a>
+    <a class="footer-link" href="https://www.instagram.com/rithin_shetty/?hl=en">Instagram</a>
+    <a class="footer-link" href="https://www.appbrewery.co/">Website</a>
+    <p class="copyright">© 2022 Rithin Shetty.</p>
+  </div>
+  </body>
+</html>
